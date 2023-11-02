@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="utf-8" />
+	<title>نمونه کار ها</title>
+
+	<!-- Meta Data -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="format-detection" content="address=no"/>
+	<meta name="author" content="AliNiyazi" />
+	<meta name="description" content="vCard" />
+
+	<!-- Twitter data -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@AliNiyazi">
+	<meta name="twitter:title" content="vCard">
+	<meta name="twitter:description" content="vCard">
+	<meta name="twitter:image" content="{% static 'images/social.html' %}">
+
+	<!-- Open Graph data -->
+	<meta property="og:title" content="ArtTemplate" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="your url website" />
+	<meta property="og:image" content="assets/images/social.html" />
+	<meta property="og:description" content="vCard" />
+	<meta property="og:site_name" content="vCard" />
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="144x144" href="{% static 'images/favicons/apple-touch-icon-144x144.png' %}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/favicons/apple-touch-icon-114x114.png' %}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/favicons/apple-touch-icon-72x72.png' %}">
+	<link rel="apple-touch-icon" sizes="57x57" href="{% static 'images/favicons/apple-touch-icon-57x57.png' %}">
+	<link rel="shortcut icon" href="{% static 'images/favicons/favicon.png' %}" type="image/png">
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/vendors/bootstrap.min.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/rtl.css' %}"/>
+
+</head>
+    <main class="main">
+	    <div class="container gutter-top gutter-bottom">
+		    <div class="row sticky-parent">
+			    <!-- Sidebar -->
+                <aside class="col-12 col-md-12 col-xl-3">
+				    <div class="sidebar box-outer sticky-column">
+						<!-- My photo -->
+						<div class="sidebar__base-info">
+					    	<figure class="avatar-box">
+                                <img src="{% static 'images/Personal2.jpg' %}" alt="یاشار توکل نیا">
+						    </figure>
+
+						    <div class="text-xl-center">
+						        <h3 class="title title--h3 sidebar__name">یاشار توکل نیا</h3>
+							    <div class="badge">توسعه دهنده وب</div>
+						    </div>
+
+							<button class="btn btn--small btn--icon-right sidebar__btn js-btn-toggle"><span>نمایش اطلاعات تماس</span><i class="feathericon-chevron-down"></i></button>
+						</div>
+
+						<div class="sidebar__additional-info js-show">
+							<div class="separation"></div>
+		                    <ul class="details-info">
+							    <!-- Email -->
+							    <li class="details-info__item">
+							        <span class="box icon-box"><i class="font-icon icon-envelope"></i></span>
+								    <div class="contacts-block__info">
+									    <span class="overhead">ایمیل</span>
+									    <a class="text-overflow" href="{{ personal_info.email }}" title="{{ personal_info.email }}">{{ personal_info.email }}</a>
+								    </div>
+							    </li>
+							    <!-- Phone -->
+						 	    <li class="details-info__item">
+								    <span class="box icon-box"><i class="font-icon icon-phone"></i></span>
+								    <div class="contacts-block__info">
+									    <span class="overhead">تلفن</span>
+							            <span class="text-overflow" title="{{ personal_info.phone }}">{{ personal_info.phone }}</span>
+								    </div>	
+							    </li>
+								<!-- Birthday -->
+					            <li class="details-info__item">
+								    <span class="box icon-box"><i class="font-icon icon-calendar"></i></span>
+								    <div class="contacts-block__info">
+									    <span class="overhead">تاریخ تولد</span>
+							            <span class="text-overflow" title="{{ personal_info.birthday }}"> {{ personal_info.birthday }}</span>
+								    </div>
+							    </li>
+								<!-- Location -->
+						        <li class="details-info__item">
+								    <span class="box icon-box"><i class="font-icon icon-location"></i></span>
+								    <div class="contacts-block__info">
+									    <span class="overhead">موقعیت مکانی</span>
+									    <span class="text-overflow" title="{{ personal_info.address }}">{{ personal_info.address }}</span>
+								    </div>
+							    </li>
+					        </ul>
+						    <div class="separation d-xl-none"></div>
+
+						    <!-- Social -->
+						    <div class="social">
+							    <a class="social__link" href="{{ personal_info.linkedin }}"><i class="feathericon-linkedin"></i></a>
+							    <a class="social__link" href="{{ personal_info.twitter }}"><i class="feathericon-twitter"></i></a>
+						  	    <a class="social__link" href="{{ personal_info.instagram }}"><i class="feathericon-instagram"></i></a>
+						    </div>
+						</div>	
+					</div>	
+		        </aside>
+		        
+				<!-- Content -->
+		        <div class="col-12 col-md-12 col-xl-9">
+				    <div class="box-outer pb-0">
+					    <!-- Menu -->
+						<div class="nav-container">
+							<ul class="nav">
+								<li class="nav__item"><a href="/">درباره من</a></li>
+								<li class="nav__item"><a href="/resume/">رزومه من</a></li>
+								<li class="nav__item"><a class="active" href="/works/">نمونه کار ها</a></li>
+{#								<li class="nav__item"><a href="/blog/">وبلاگ</a></li>#}
+								<li class="nav__item"><a href="/contact/">تماس با من</a></li>
+							</ul>
+						</div>
+						
+					    <!-- About -->
+						<div class="pb-3">
+		                    <h1 class="title title--h1 title__separate">نمونه کار ها</h1>
+					    </div>
+						<!-- Gallery -->
+						<div class="gallery-grid js-masonry js-filter-container">
+							<div class="gutter-sizer"></div>
+							<!-- Item 1 -->
+                            {% for item in items %}
+							<div class="gallery-grid__item category-design">
+								<a href="{{ item.id }}">
+								    <div class="gallery-grid__image-wrap">
+                                        <img class="gallery-grid__image cover lazyload" src="{{ item.image.url }}" alt="" />
+								    </div>
+                                    <div class="gallery-grid__caption">
+									    <h3 class="title gallery-grid__title">{{ item.title }}</h3>
+									    <span class="gallery-grid__category">{{ item.subject }}</span>
+									</div>
+								</a>
+							</div>
+                            {% endfor %}
+						</div><!-- /Gallery -->
+					</div>
+		        </div><!-- Content -->
+			</div><!-- sticky-parent -->
+		</div><!-- container -->
+    </main>
+
+    <div class="back-to-top"></div>
+
+	<!-- JavaScripts -->
+	<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+	<script src="{% static 'js/plugins.min.js' %}"></script>
+    <script src="{% static 'js/common.js' %}"></script>
+    
+    </body>
+</html>

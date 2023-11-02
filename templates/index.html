@@ -1,0 +1,317 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="utf-8"/>
+    <title>یاشار توکل نیا</title>
+    <!-- Meta Data -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="address=no"/>
+    <meta name="author" content="Yashar"/>
+    <meta name="description" content="yashar Tavakolniax`"/>
+
+    <!-- Twitter data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@yyyasharrr_">
+    <meta name="twitter:title" content="Yashar">
+    <meta name="twitter:description" content="Personal site">
+    <meta name="twitter:image" content="assets/images/social.html">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="ArtTemplate"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="your url website"/>
+    <meta property="og:image" content="{% static '/images/social.html' %}"/>
+    <meta property="og:description" content="Personal site"/>
+    <meta property="og:site_name" content="Yashar Tavakolnia"/>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'images/favicons/apple-touch-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/favicons/apple-touch-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/favicons/apple-touch-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'images/favicons/apple-touch-icon-57x57.png' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicons/favicon.png' %}" type="image/png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/vendors/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/rtl.css' %}"/>
+
+</head>
+<body>
+<main class="main">
+    <div class="container gutter-top gutter-bottom">
+        <div class="row sticky-parent">
+            <!-- Sidebar -->
+            <aside class="col-12 col-md-12 col-xl-3">
+                <div class="sidebar box-outer sticky-column">
+                    <!-- My photo -->
+                    <div class="sidebar__base-info">
+                        <figure class="avatar-box">
+                            <img src="{% static '/images/Personal2.jpg' %}" alt="یاشار توکل نیا">
+                        </figure>
+
+                        <div class="text-xl-center">
+                            <h3 class="title title--h3 sidebar__name">یاشار توکل نیا</h3>
+                            <div class="badge">توسعه دهنده وب</div>
+                        </div>
+
+                        <button class="btn btn--small btn--icon-right sidebar__btn js-btn-toggle"><span>نمایش اطلاعات تماس</span><i
+                                class="feathericon-chevron-down"></i></button>
+                    </div>
+
+                    <div class="sidebar__additional-info js-show">
+                        <div class="separation"></div>
+                        <ul class="details-info">
+                            <!-- Email -->
+                            <li class="details-info__item">
+                                <span class="box icon-box"><i class="font-icon icon-envelope"></i></span>
+                                <div class="contacts-block__info">
+                                    <span class="overhead">ایمیل</span>
+                                    <a class="text-overflow" href="{{ personal_info.email }}"
+                                       title="{{ personal_info.email }}">{{ personal_info.email }}</a>
+                                </div>
+                            </li>
+                            <!-- Phone -->
+                            <li class="details-info__item">
+                                <span class="box icon-box"><i class="font-icon icon-phone"></i></span>
+                                <div class="contacts-block__info">
+                                    <span class="overhead">تلفن</span>
+                                    <span class="text-overflow"
+                                          title="{{ personal_info.phone }}">{{ personal_info.phone }}</span>
+                                </div>
+                            </li>
+                            <!-- Birthday -->
+                            <li class="details-info__item">
+                                <span class="box icon-box"><i class="font-icon icon-calendar"></i></span>
+                                <div class="contacts-block__info">
+                                    <span class="overhead">تاریخ تولد</span>
+                                    <span class="text-overflow"
+                                          title="{{ personal_info.birthday }}">{{ personal_info.birthday }}</span>
+                                </div>
+                            </li>
+                            <!-- Location -->
+                            <li class="details-info__item">
+                                <span class="box icon-box"><i class="font-icon icon-location"></i></span>
+                                <div class="contacts-block__info">
+                                    <span class="overhead">موقعیت مکانی</span>
+                                    <span class="text-overflow"
+                                          title="{{ personal_info.address }}">{{ personal_info.address }}</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="separation d-xl-none"></div>
+
+                        <!-- Social -->
+                        <div class="social">
+                            <a class="social__link" href="{{ personal_info.linkedin }}"><i
+                                    class="feathericon-linkedin"></i></a>
+                            <a class="social__link" href="{{ personal_info.twitter }}"><i
+                                    class="feathericon-twitter"></i></a>
+                            <a class="social__link" href="{{ personal_info.instagram }}"><i
+                                    class="feathericon-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Content -->
+            <div class="col-12 col-md-12 col-xl-9">
+                <div class="box-outer">
+                    <!-- Menu -->
+                    <div class="nav-container">
+                        <ul class="nav">
+                            <li class="nav__item"><a class="active" href="/">درباره من</a></li>
+                            <li class="nav__item"><a href="resume/">رزومه من</a></li>
+                            <li class="nav__item"><a href="works/">نمونه کار ها</a></li>
+{#                            <li class="nav__item"><a href="blog/">وبلاگ</a></li>#}
+                            <li class="nav__item"><a href="contact/">تماس با من</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- About -->
+                    <div class="pb-0 pb-sm-2">
+                        <h1 class="title title--h1 title__separate">درباره من</h1>
+                        <p>"من یاشار توکل نیا هستم، یک برنامه‌نویس و توسعه‌دهنده وب با انگیزه به دنبال ایجاد دنیایی از
+                            تجربه‌های دیجیتالی استثنایی. از طراحی تا اجرا، تمرکز من بر روی جزئیات کوچک است تا تجربه
+                            کاربران را تبدیل به یک سفر لذت‌بخش کنم. با من باشید تا در مسیر خلاقانه به جلو برویم."</p>
+                    </div>
+
+                    <!-- What -->
+                    <h2 class="title title--h2 mt-3">چه کاری انجام می دهم</h2>
+                    <div class="row">
+                        <!-- Case Item -->
+                        <div class="col-12 col-lg-6">
+                            <div class="case-item box box-inner">
+                                <img class="case-item__icon" src="{% static 'icons/icon-design.svg' %}" alt=""/>
+                                <div>
+                                    <h3 class="title title--h3">طراحی وب سایت</h3>
+                                    <p class="case-item__caption">مدرن ترین و با کیفیت بالا طراحی شده در سطح حرفه
+                                        ای.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Case Item -->
+                        <div class="col-12 col-lg-6">
+                            <div class="case-item box box-inner">
+                                <img class="case-item__icon" src="{% static 'icons/icon-dev.svg' %}" alt=""/>
+                                <div>
+                                    <h3 class="title title--h3">توسعه دهنده وب</h3>
+                                    <p class="case-item__caption">با کیفیت بالا و حرفه ای توسعه سایت ها در سطح حرفه
+                                        ای.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Case Item -->
+                        <div class="col-12 col-lg-6">
+                            <div class="case-item box box-inner">
+                                <img class="case-item__icon" src="{% static 'icons/icon-app.svg' %}" alt=""/>
+                                <div>
+                                    <h3 class="title title--h3">برنامه های موبایل</h3>
+                                    <p class="case-item__caption">با کیفیت بالا و حرفه ای توسعه سایت ها در سطح حرفه
+                                        ای.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Case Item -->
+                        <div class="col-12 col-lg-6">
+                            <div class="case-item box box-inner">
+                                <img class="case-item__icon" src="{% static 'icons/icon-photo.svg' %}" alt=""/>
+                                <div>
+                                    <h3 class="title title--h3">عکاسی</h3>
+                                    <p class="case-item__caption">با کیفیت بالا و حرفه ای توسعه سایت ها در سطح حرفه
+                                        ای.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonials -->
+
+                    <!-- Clients -->
+                    <h2 class="title title--h2 mt-4">مشتریان</h2>
+                    <div class="swiper-container js-carousel-clients">
+                        <div class="swiper-wrapper">
+                            <!-- Item client -->
+                            {% for cl in clients %}
+                            <figure class="swiper-slide">
+                                <a href="#"><img class="logo-client"
+                                                 src="{{ cl.logo.url }}" alt="{{ cl.title.url }}"/></a>
+                            </figure>
+                            {% endfor %}
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+                    </div><!-- /swiper-container -->
+                </div><!-- box-outer -->
+            </div><!-- Content -->
+        </div><!-- sticky-parent -->
+    </div><!-- container -->
+</main>
+
+<div class="back-to-top"></div>
+
+<!-- Full review 1 -->
+<div id="review-1" class="popup mfp-hide mfp-with-anim">
+    <div class="row">
+        <div class="col-12 col-sm-2 full-rewiew-con-avatar">
+            <figure class="box box-avatar">
+                <img src="{% static 'images/avatar-1.png' %}" alt="Daniel Lewis">
+            </figure>
+            <div class="review-icon-quote"></div>
+        </div>
+        <div class="col-12 col-sm-10 full-rewiew-con-text">
+            <h2 class="title title--h2 mb-1">دنیل لویس</h2>
+            <span class="review-date">25 بهمن 1400</span>
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده
+                شناخت فراوان جامعه و متخصصان را می طلبد.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Full review 2 -->
+<div id="review-2" class="popup mfp-hide mfp-with-anim">
+    <div class="row">
+        <div class="col-12 col-sm-2 full-rewiew-con-avatar">
+            <figure class="box box-avatar">
+                <img src="{% static 'images/avatar-2.png' %}" alt="Daniel Lewis">
+            </figure>
+            <div class="review-icon-quote"></div>
+        </div>
+        <div class="col-12 col-sm-10 full-rewiew-con-text">
+            <h2 class="title title--h2 mb-1">جسیکا میلر</h2>
+            <span class="review-date">25 بهمن 1400</span>
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده
+                شناخت فراوان جامعه و متخصصان را می طلبد.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Full review 3 -->
+<div id="review-3" class="popup mfp-hide mfp-with-anim">
+    <div class="row">
+        <div class="col-12 col-sm-2 full-rewiew-con-avatar">
+            <figure class="box box-avatar">
+                <img src="{% static 'images/avatar-3.png' %}" alt="Daniel Lewis">
+            </figure>
+            <div class="review-icon-quote"></div>
+        </div>
+        <div class="col-12 col-sm-10 full-rewiew-con-text">
+            <h2 class="title title--h2 mb-1">تانیا رویز</h2>
+            <span class="review-date">25 بهمن 1400</span>
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده
+                شناخت فراوان جامعه و متخصصان را می طلبد.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Full review 4 -->
+<div id="review-4" class="popup mfp-hide mfp-with-anim">
+    <div class="row">
+        <div class="col-12 col-sm-2 full-rewiew-con-avatar">
+            <figure class="box box-avatar">
+                <img src="{% static 'images/avatar-4.png' %}" alt="Daniel Lewis">
+            </figure>
+            <div class="review-icon-quote"></div>
+        </div>
+        <div class="col-12 col-sm-10 full-rewiew-con-text">
+            <h2 class="title title--h2 mb-1">توماس کاسترو</h2>
+            <span class="review-date">25 بهمن 1400</span>
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده
+                شناخت فراوان جامعه و متخصصان را می طلبد.</p>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScripts -->
+<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'js/plugins.min.js' %}"></script>
+<script src="{% static 'js/common.js' %}"></script>
+
+</body>
+</html>
